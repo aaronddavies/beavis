@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+import random
+from time import sleep
+import argparse
+
+parser = argparse.ArgumentParser(description='Famously lambast a show about straight-A students.')
+parser.add_argument('-C', dest='cornholio', action='store_true',
+                                                help='enter Cornholio mode')
+
+args = parser.parse_args()
+beav = [
+    "beav",
+    "butt",
+    "is",
+    "head",
+    "er",
+    "cake",
+    "munch",
+    "barn",
+    "beau",
+    "ford",
+    "corn",
+    "holio",
+    "buff",
+    "coat",
+    "trav",
+    "bung",
+    "plug",
+    "crev",
+    "bu",
+    "bern",
+    "ardo",
+    "bum"
+        ]
+def beavis():
+    return beav[random.randint(0, len(beav) - 1)]
+def shutup():
+    print( beavis() + beavis() + " and " + beavis() + beavis() )
+shutup()
+if args.cornholio:
+    while True:
+        sleep(2)
+        shutup()
